@@ -1,1 +1,8 @@
-print("this is my first step")
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"message": "Web service is running successfully"}
+
